@@ -1,0 +1,18 @@
+{
+  "name": "node_cli_z",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "node-cli": "bin/index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "commander": "^2.15.1",
+    "download-git-repo": "^1.0.2",
+    "handlebars": "^4.0.11",
+    "inquirer": "^5.2.0",
+    "metalsmith": "^2.3.0",
+    "tracer": "^0.8.12"
+  }
+}

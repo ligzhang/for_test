@@ -1,0 +1,35 @@
+{
+  "name": "@fe6/fecli",
+  "version": "0.2.0",
+  "description": "一键下载 github 仓库作为模板",
+  "bin": {
+    "fe": "./bin/fe.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fe6/fecli.git"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "react-components",
+    "react-cli",
+    "fecli",
+    "fe-cli",
+    "cli"
+  ],
+  "author": "李梦龙",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fe6/rcli/issues"
+  },
+  "homepage": "https://github.com/fe6/rcli#readme",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "cli-table": "^0.3.1",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.15.1",
+    "ora": "^2.0.0"
+  }
+}

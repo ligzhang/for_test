@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        #dragtarget {
+            width: 400px;
+            height: 400px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Hello, my name is Alan, I am from Somewhere, TX. I have 2 kids:</p>
+    <ul>
+        <li>Jimmy is 12</li>
+        <li>Sally is 4</li>
+    </ul>
+    <div id='drag' draggable="true">9999999999</div>
+    <div id='dragtarget'></div>
+    <script>
+        let e = document.querySelector('#drag')
+        e.addEventListener('dragstart', (e) => {
+        })
+
+        e.addEventListener('dragend', (e) => {
+            console.log(e, 'end')
+            e.dataTransfer.setData('text', e.target.innerHTML)
+        })
+        let dragtarget = document.querySelector('#dragtarget')
+        dragtarget.addEventListener('dragover', (e) => {
+            if (e.preventDefault) {
+                console.log('eeee')
+                e.preventDefault()
+
+            }
+        })
+        dragtarget.addEventListener('dragenter', (e) => {
+            if (e.preventDefault) {
+                let text = e.dataTransfer.getData('text')
+                console.log(text, 'text')
+                e.preventDefault()
+
+            }
+        })
+    </script>
+
+</body>
+
+</html>
