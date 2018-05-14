@@ -333,3 +333,37 @@ function firstUniqueChar(str){
     }
     return -1
 }
+
+class A {
+  
+  getInstance(){
+    var instance = null
+    return function(){
+      if (instance == null) {
+        instance = new A()
+      }
+      return instance
+    }
+  }
+}
+
+
+function single(name){
+  this.name = name
+  this.instance = null
+}
+
+single.prototype.getName = function(){
+  alert(this.name)
+}
+
+single.getName = function(){
+  if(!this.instance ) {
+    this.instance = new single()
+  }
+
+  return this.instance
+}
+
+var a = single.getName('z')
+var b = single.getName('l')
